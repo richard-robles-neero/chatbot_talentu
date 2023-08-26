@@ -8,13 +8,14 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-
-[tool.poetry.group.dev.dependencies]
 fastapi = "^0.102.0"
 trio = "^0.22.2"
 hypercorn = "^0.14.4"
 openai = "^0.27.9"
 httpx = "^0.24.1"
+
+[tool.poetry.group.dev.dependencies]
+
 
 [build-system]
 requires = ["poetry-core"]
