@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "chatbot-talentu"
+version = "0.1.0"
+description = "Chat bot Headless for Webhook integration with Zoho Customer service channels"
+authors = ["richard-robles-neero <142441502+richard-robles-neero@users.noreply.github.com>"]
+license = "GLP v3"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+fastapi = "^0.102.0"
+trio = "^0.22.2"
+hypercorn = "^0.14.4"
+openai = "^0.27.9"
+httpx = "^0.24.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
