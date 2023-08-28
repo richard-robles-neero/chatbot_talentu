@@ -19,8 +19,7 @@ COPY . .
 
 EXPOSE 8000
 
-# Define environment variable for Hypercorn bind address
-ENV HYPERCORN_BIND=127.0.0.1:8000
+
 
 # Run Hypercorn when the container launches
-CMD ["hypercorn", "main:app", "--bind", "$HYPERCORN_BIND"]
+CMD ["hypercorn", "main:app", "--bind", "0.0.0.0:8000", "--reload", "--worker-class", "trio"]
