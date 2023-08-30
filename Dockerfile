@@ -22,4 +22,4 @@ EXPOSE 8000
 
 
 # Run Hypercorn when the container launches
-CMD ["hypercorn", "main:app", "--bind", "0.0.0.0:8000", "--reload", "--worker-class", "trio"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
