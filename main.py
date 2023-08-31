@@ -1,8 +1,9 @@
 from fastapi import FastAPI, Response
+from fastapi.responses import JSONResponse
 
 app = FastAPI()
 
-@app.get("/")
+@app.get("/", response_class=JSONResponse)
 def read_root(response: Response):
     return {
             "action": "reply",
