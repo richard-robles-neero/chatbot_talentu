@@ -4,8 +4,11 @@ app = FastAPI()
 
 @app.get("/")
 def read_root(response: Response):
-    response.headers["ngrok-skip-browser-warning"] = "1"
     return {
             "action": "reply",
-            "replies": ["¡Hola! soy Ana ¿Cómo te sientes hoy?"],
+            "replies": ["¡Hola! Soy Nestlé, te doy la bienvenida 🤗¿En qué puedo ayudarte?"],
+            "suggestions": [
+                "Quiero registrarme",
+                "Publicar mis memorias"
+            ]
         }
